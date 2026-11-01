@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Research in stochastic particle systems, growth–fragmentation, coalescence and mathematical biology by Sebastian Baudelet.">
+  <meta name="theme-color" content="#09685e">
+  <title>Research | Sebastian Baudelet-Aponte</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="index.html">Sebastian Baudelet</a>
+    <nav aria-label="Main navigation"><a href="research.html" aria-current="page">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="conferences.html">Conferences</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="files/CV_website.pdf">CV</a></nav>
+  </div></header>
+  <main id="main">
+    <header class="page-title"><h1>Research</h1></header>
+    <section class="research-section" id="growth-fragmentation" aria-labelledby="growth-title">
+      <p class="eyebrow" id="cell-populations">Current postdoctoral research</p>
+      <div>
+        <h2 id="growth-title">Rare lineages and the onset of asymptotic population growth</h2>
+        <p>At Inria Saclay, I work with Jakob Ruess on the time needed for a random cell population to reach its long-time growth regime. I study an explicit growth–fragmentation model in which individual growth rates follow Ornstein–Uhlenbeck dynamics and are inherited at division.</p>
+        <p>The growth–fragmentation PDE describes the population in expectation, where rare lineages with favourable growth histories can carry substantial weight. The central question is when an individual random population reaches its asymptotic regime, and how the rarity of these lineages and the associated timescale depend on the OU parameters: mean growth rate, mean-reversion strength and noise amplitude.</p>
+        <!-- <p>The analysis connects deterministic long-time behaviour with almost-sure asymptotics of suitably normalised population observables <i>Z</i><sub>t</sub>(<i>f</i>), using a many-to-one formula and the associated biased spine process. The current objective is to quantify a transition timescale separating the transient behaviour from the asymptotic regime.</p> -->
+        
+      </div>
+    </section>
+    <section class="research-section" id="coalescence" aria-labelledby="coalescence-title"><p class="eyebrow">Coalescence</p><div><h2 id="coalescence-title">Quantitative convergence to the Smoluchowski equation</h2><p>With Rémi Catellier, I study the convergence of stochastic coalescence processes to the deterministic Smoluchowski coagulation equation, including singular kernels of the form</p>
+    <p class="equation" aria-label="K alpha of x and y equals x to the power minus alpha plus y to the power minus alpha">
+      \[ K_{\alpha}(x,y) = x^{-\alpha} + y^{-\alpha}, \quad \alpha > 0. \]
+    </p>
+    <p>The work establishes an <span aria-label="order one over N">O(1/<i>N</i>)</span> convergence rate for expectations of regular observables. The approach uses calculus on spaces of measures and Wasserstein-type distances adapted to the singularity of the kernel.</p><div class="inline-links"><a href="publications.html#coalescence">Manuscript details →</a></div></div></section>
+  <section class="research-section" id="mycelial-networks" aria-labelledby="mycelial-title"><p class="eyebrow">PhD</p>
+    <div>
+    <h2 id="mycelial-title">Branching in mycelial networks</h2>
+
+    <p>My thesis at Université Côte d’Azur, supervised by Thierry Goudon and Rémi Catellier, develops a multiscale model of branching in filamentous fungi. </p>
+
+    <figure class="fungus-photo">
+    <a href="images/podospora-network.jpg" aria-label="View the fungal network photograph at full size"><img src="images/podospora-network.jpg" alt="Microscopy image of Podospora anserina showing a network of fine, branching fungal filaments called hyphae." width="2566" height="2730" loading="lazy"></a>
+    <figcaption><em>Podospora anserina</em> after 20 hours of growth; network diameter approximately 8 mm. The branching filaments are called hyphae. Image: LIED laboratory, ANR NEMATIC project; contributions from Clara Ledoux, Florence Chapeland-Leclerc, Gwenaël Ruprich-Robert, Eric Herbert and colleagues.</figcaption>
+    </figure>
+    <p>
+    This PhD thesis lies at the intersection of biological modeling and stochastic process theory, focusing on the growth and branching dynamics of filamentous fungi. These organisms form intricate networks known as <em>mycelia</em>, composed of elongated, interconnected cells. Branching, the emergence of new growth tips, is a critical process that shapes the overall network architecture and constitutes the central focus of this work.
+
+    We propose a mechanistic framework linking small-scale cellular dynamics to the large-scale network structure by describing the behavior of an ensemble of proteins believed to signal branching sites. These proteins diffuse and coalesce upon collision, forming larger aggregates. Branching events occur when two protein clusters together exceed a critical mass threshold, thereby connecting microscopic cluster dynamics to the probability of branching. Although the initial model is explicit, it is analytically intractable; thus, successive approximations are employed to derive explicit formulas and biologically meaningful predictions.
+
+  </p>
+  
+  <figure class="fungal-model">
+  <div class="fungal-model-panels">
+    <div><img src="images/fungal-tip-extension.png" alt="Schematic of regular hyphal tip extension directed by a single large polarisome cluster." width="725" height="427" loading="lazy"><p>Regular tip extension</p></div>
+    <div><img src="images/fungal-tip-branching.png" alt="Schematic of apical branching with distinct growth directions associated with polarisome clusters." width="581" height="270" loading="lazy"><p>Apical branching</p></div>
+  </div>
+  <figcaption>Model schematics from my doctoral work. Between calcium pulses, polarisome clusters diffuse and merge at the hyphal tip. In the model, branching occurs when at least two clusters exceed a mass threshold at the next pulse.</figcaption>
+</figure>
+<details class="model-approximations">
+  <summary>From the spatial model to analytical approximations</summary>
+  <p> I model polarisome clusters as particles that diffuse and merge on the surface of the hyphal tip, with mass-dependent diffusivities and interaction radii. The quantity of interest is the probability that at least two clusters exceed a mass threshold at the next calcium pulse—the proposed criterion for apical branching. </p>
+<figure class="technical-figure domain-figure">
+  <a href="images/brownian.png" aria-label="Open the Brownian model illustration at full size"><img src="images/brownian.png" alt="Polarisome clusters of different sizes on a hemispherical domain of radius R, with a reflecting boundary." loading="lazy"></a>
+  <figcaption>Brownian coalescence on the hyphal tip: clusters diffuse on a hemispherical surface and merge upon contact. Diffusivity and interaction radius depend on cluster mass.</figcaption>
+</figure>
+<figure class="technical-figure">
+  <a href="images/approximation-methods.svg" aria-label="Open the approximation diagram at full size"><img src="images/approximation-methods.svg" alt="Brownian coalescence leads to stochastic coalescence through mean first-passage-time arguments, then to CASC through a mean-field approximation, and finally to analytical formulas through Gaussian fluctuations." loading="lazy"></a>
+  <figcaption>Successive approximations and their underlying methods. CASC denotes cluster-averaged stochastic coalescence; CLT denotes the central limit theorem. Select either diagram to view it at full size.</figcaption>
+</figure>
+  <ol>
+    <li><strong>Stochastic coalescence.</strong> Mean first-passage-time arguments replace spatial encounters by mass-dependent coagulation rates in the small-cluster-radius regime.</li>
+    <li><strong>Cluster-averaged stochastic coalescence.</strong> A mean-field approximation simplifies the mass dynamics when many clusters remain, giving tractable conditional mass distributions.</li>
+    <li><strong>Analytical branching probabilities.</strong> A short-time Gaussian approximation for the number of clusters leads to explicit approximations of the branching probability.</li>
+  </ol>
+  <p>These approximations combine theoretical, heuristic and numerical arguments, with different ranges of validity. Numerical comparisons assess their accuracy against the spatial model.</p>
+</details>
+<p class="research-connection">The singular coagulation kernels arising in this modelling work also motivated my <a href="#coalescence">study of convergence rates for observables</a>: a separate theoretical analysis of the stochastic coalescence process and its deterministic Smoluchowski limit.</p>
+<div class="inline-links"><a href="publications.html#branching">Related manuscript →</a></div></div></section>
+    <section class="research-section" id="optimal-transport" aria-labelledby="transport-title"><p class="eyebrow">Optimal transport</p><div><h2 id="transport-title">Numerical methods for mean field optimal transport</h2><p>In collaborative work developed through CEMRACS 2022, we study optimal transport problems with mean field interactions and prescribed terminal distributions. We investigate three approaches based on neural networks: learning a control directly, solving a forward–backward PDE system, and a primal–dual formulation.</p><div class="inline-links"><a href="publications.html#mean-field">Published article &amp; full text →</a></div></div></section>
+  </main>
+  <footer><div class="footer-inner"><p>© Sebastian Baudelet-Aponte</p><p>Applied mathematics · Inria Saclay</p></div></footer>
+</body>
+</html>
+
